@@ -1,11 +1,55 @@
-[gd_scene format=3 uid="uid://g7k0dw4hf3pb"]
+[gd_scene format=3 uid="uid://ptuy2owhckbt"]
 
-[ext_resource type="Script" uid="uid://b7oo6d0cgd723" path="res://test/test_player.gd" id="1_0ax77"]
 [ext_resource type="Texture2D" uid="uid://d4kd1nnfrtl1x" path="res://icon.svg" id="2_22uif"]
+
+[sub_resource type="GDScript" id="GDScript_e7mys"]
+script/source = "extends CharacterBody2D
+
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+		
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
+
+
+func _physics_process(delta):
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y += gravity * delta
+
+	# Handle Jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction = Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+	#Flip the animation
+		if direction >0:
+			sprite.flip_h = false
+		else:
+			sprite.flip_h = true
+		
+		#Play run animation
+		sprite.play(\"run\")
+	
+	else:
+	#Stop moving
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+#Play idle animation
+		sprite.play(\"idle\")
+		move_and_slide()
+"
 
 [node name="Test_Player" type="CharacterBody2D" unique_id=617167179]
 scale = Vector2(0.132287, 0.138922)
-script = ExtResource("1_0ax77")
+script = SubResource("GDScript_e7mys")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=89887681]
 texture = ExtResource("2_22uif")
