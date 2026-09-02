@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://g7k0dw4hf3pb"]
+
+[ext_resource type="Script" uid="uid://b7oo6d0cgd723" path="res://test/test_player.gd" id="1_0ax77"]
+[ext_resource type="Texture2D" uid="uid://d4kd1nnfrtl1x" path="res://icon.svg" id="2_22uif"]
+
+[node name="Test_Player" type="CharacterBody2D" unique_id=617167179]
+scale = Vector2(0.132287, 0.138922)
+script = ExtResource("1_0ax77")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=89887681]
+texture = ExtResource("2_22uif")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=362371930]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
