@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://hlclfoosa5ks" path="res://assets/sprites/world_tileset.png" id="1_014kd"]
 [ext_resource type="PackedScene" uid="uid://s40yslw7i1sn" path="res://scenes/platform.tscn" id="2_bswci"]
+[ext_resource type="PackedScene" uid="uid://d1ibf870yo2vq" path="res://scenes/player.tscn" id="3_5xbjy"]
+[ext_resource type="PackedScene" uid="uid://boa5nl3hyxxi6" path="res://scenes/coin.tscn" id="4_4nkto"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bswci"]
 texture = ExtResource("1_014kd")
@@ -172,6 +174,8 @@ sources/0 = SubResource("TileSetAtlasSource_bswci")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8upip"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_014kd"]
+normal = Vector2(0.05741606, -0.9983503)
+distance = 4.876919
 
 [sub_resource type="Animation" id="Animation_bswci"]
 length = 0.001
@@ -234,6 +238,7 @@ position = Vector2(0, -57)
 rotation = 1.5133487
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left Boundary" unique_id=117693149]
+position = Vector2(-1.3428465, 5.932686)
 shape = SubResource("WorldBoundaryShape2D_014kd")
 
 [node name="Platform" parent="." unique_id=794337238 instance=ExtResource("2_bswci")]
@@ -245,3 +250,36 @@ position = Vector2(1224, 120)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform/Platform2" unique_id=438740497]
 libraries/ = SubResource("AnimationLibrary_5xbjy")
 autoplay = &"move"
+
+[node name="Player" parent="." unique_id=1460538173 instance=ExtResource("3_5xbjy")]
+position = Vector2(109, -53)
+
+[node name="Coin" parent="." unique_id=174181695 instance=ExtResource("4_4nkto")]
+position = Vector2(151, -31)
+
+[node name="Coin2" parent="." unique_id=1486495390 instance=ExtResource("4_4nkto")]
+position = Vector2(360, -34)
+
+[node name="Coin3" parent="." unique_id=1980118735 instance=ExtResource("4_4nkto")]
+position = Vector2(377, -24)
+
+[node name="Coin4" parent="." unique_id=908869710 instance=ExtResource("4_4nkto")]
+position = Vector2(216, -126)
+
+[node name="Coin5" parent="." unique_id=632776291 instance=ExtResource("4_4nkto")]
+position = Vector2(1367, 19)
+
+[node name="Coin6" parent="." unique_id=849296177 instance=ExtResource("4_4nkto")]
+position = Vector2(922, -74)
+
+[node name="Coin7" parent="." unique_id=349745034 instance=ExtResource("4_4nkto")]
+position = Vector2(1095, -13)
+
+[node name="Coin8" parent="." unique_id=1290380092 instance=ExtResource("4_4nkto")]
+position = Vector2(550, -138)
+
+[node name="Coin9" parent="." unique_id=1076414676 instance=ExtResource("4_4nkto")]
+position = Vector2(568, -138)
+
+[node name="Coin10" parent="." unique_id=345891007 instance=ExtResource("4_4nkto")]
+position = Vector2(805, 6)
