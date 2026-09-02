@@ -2,6 +2,34 @@
 
 [ext_resource type="Texture2D" uid="uid://dvfn8modq5ptn" path="res://assets/sprites/knight.png" id="1_4flbx"]
 
+[sub_resource type="GDScript" id="GDScript_uwrxv"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
 region = Rect2(0, 224, 32, 32)
@@ -194,6 +222,7 @@ height = 24.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1460538173]
 z_index = 5
+script = SubResource("GDScript_uwrxv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1850682529]
 position = Vector2(0, -12)
