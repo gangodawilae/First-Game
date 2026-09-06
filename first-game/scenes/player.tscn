@@ -249,6 +249,7 @@ autoplay = "death"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1044305416]
 position = Vector2(-1, -10)
 shape = SubResource("CapsuleShape2D_3owqy")
+one_way_collision = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=969387559]
 zoom = Vector2(4, 4)

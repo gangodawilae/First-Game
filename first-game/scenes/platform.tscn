@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cm3rf6t67jr8" path="res://assets/sprites/platforms.png" id="1_mi635"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3owqy"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8upip"]
 size = Vector2(32, 9)
 
 [node name="Platform" type="AnimatableBody2D" unique_id=794337238]
@@ -12,7 +12,7 @@ texture = ExtResource("1_mi635")
 region_enabled = true
 region_rect = Rect2(16, 0, 32, 10)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=1294287737]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=94603266]
 position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_3owqy")
+shape = SubResource("RectangleShape2D_8upip")
 one_way_collision = true
