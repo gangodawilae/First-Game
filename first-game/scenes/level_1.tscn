@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://boa5nl3hyxxi6" path="res://scenes/coin.tscn" id="4_4nkto"]
 [ext_resource type="PackedScene" uid="uid://bkarvopvcglva" path="res://scenes/kill_zone.tscn" id="5_4nkto"]
 [ext_resource type="PackedScene" uid="uid://12050b0cxoj8" path="res://scenes/slime.tscn" id="6_fcfvj"]
+[ext_resource type="FontFile" uid="uid://c0udlrmuadkt6" path="res://assets/fonts/PixelOperator8.ttf" id="7_pa8r4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bswci"]
 texture = ExtResource("1_014kd")
@@ -302,3 +303,53 @@ position = Vector2(919, 32)
 
 [node name="Slime3" parent="." unique_id=786064326 instance=ExtResource("6_fcfvj")]
 position = Vector2(589, -80)
+
+[node name="Label" type="Label" parent="." unique_id=1494154998]
+offset_left = -219.0
+offset_top = -58.0
+offset_right = -12.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_pa8r4")
+theme_override_font_sizes/font_size = 24
+text = "         Start"
+
+[node name="Label2" type="Label" parent="." unique_id=834119573]
+offset_left = 514.0
+offset_top = -1.0
+offset_right = 826.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_pa8r4")
+theme_override_font_sizes/font_size = 8
+text = "Falling Hurts..."
+
+[node name="Label3" type="Label" parent="." unique_id=1356695010]
+offset_left = 1207.0
+offset_top = 73.0
+offset_right = 1519.0
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_pa8r4")
+theme_override_font_sizes/font_size = 8
+text = "    A enemy ahead!"
+
+[node name="Label4" type="Label" parent="." unique_id=125810456]
+offset_left = 1629.0
+offset_top = -74.0
+offset_right = 1941.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_pa8r4")
+theme_override_font_sizes/font_size = 8
+text = "Almost there...."
+
+[node name="Label5" type="Label" parent="." unique_id=1834014565]
+offset_left = 535.0
+offset_top = -159.0
+offset_right = 847.0
+offset_bottom = -84.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_pa8r4")
+theme_override_font_sizes/font_size = 8
+text = "Watch out for enemy!"
