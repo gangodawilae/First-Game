@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3owqy"]
-size = Vector2(10, 12)
+size = Vector2(12, 14)
 
 [node name="Slime" type="Node2D" unique_id=647460660]
 
@@ -56,3 +56,11 @@ position = Vector2(0, -12)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill zone" unique_id=50390690]
 position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_3owqy")
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=1582062584]
+position = Vector2(1, -7)
+target_position = Vector2(9, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1254404056]
+position = Vector2(1, -7)
+target_position = Vector2(-9, 0)
