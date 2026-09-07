@@ -304,7 +304,9 @@ position = Vector2(919, 32)
 [node name="Slime3" parent="." unique_id=786064326 instance=ExtResource("6_fcfvj")]
 position = Vector2(589, -80)
 
-[node name="Label" type="Label" parent="." unique_id=1494154998]
+[node name="Node" type="Node" parent="." unique_id=591649790]
+
+[node name="Label" type="Label" parent="Node" unique_id=1494154998]
 offset_left = -219.0
 offset_top = -58.0
 offset_right = -12.0
@@ -314,7 +316,7 @@ theme_override_fonts/font = ExtResource("7_pa8r4")
 theme_override_font_sizes/font_size = 24
 text = "         Start"
 
-[node name="Label2" type="Label" parent="." unique_id=834119573]
+[node name="Label2" type="Label" parent="Node" unique_id=834119573]
 offset_left = 514.0
 offset_top = -1.0
 offset_right = 826.0
@@ -324,7 +326,7 @@ theme_override_fonts/font = ExtResource("7_pa8r4")
 theme_override_font_sizes/font_size = 8
 text = "Falling Hurts..."
 
-[node name="Label3" type="Label" parent="." unique_id=1356695010]
+[node name="Label3" type="Label" parent="Node" unique_id=1356695010]
 offset_left = 1207.0
 offset_top = 73.0
 offset_right = 1519.0
@@ -334,7 +336,7 @@ theme_override_fonts/font = ExtResource("7_pa8r4")
 theme_override_font_sizes/font_size = 8
 text = "    A enemy ahead!"
 
-[node name="Label4" type="Label" parent="." unique_id=125810456]
+[node name="Label4" type="Label" parent="Node" unique_id=125810456]
 offset_left = 1629.0
 offset_top = -74.0
 offset_right = 1941.0
@@ -344,7 +346,7 @@ theme_override_fonts/font = ExtResource("7_pa8r4")
 theme_override_font_sizes/font_size = 8
 text = "Almost there...."
 
-[node name="Label5" type="Label" parent="." unique_id=1834014565]
+[node name="Label5" type="Label" parent="Node" unique_id=1834014565]
 offset_left = 535.0
 offset_top = -159.0
 offset_right = 847.0
