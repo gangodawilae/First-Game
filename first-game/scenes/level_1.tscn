@@ -242,7 +242,7 @@ position = Vector2(151, -31)
 position = Vector2(360, -34)
 
 [node name="Coin3" parent="Coins" unique_id=1980118735 instance=ExtResource("4_4nkto")]
-position = Vector2(377, -24)
+position = Vector2(373, -24)
 
 [node name="Coin4" parent="Coins" unique_id=908869710 instance=ExtResource("4_4nkto")]
 position = Vector2(216, -126)
@@ -307,13 +307,13 @@ position = Vector2(589, -80)
 [node name="Node" type="Node" parent="." unique_id=591649790]
 
 [node name="Label" type="Label" parent="Node" unique_id=1494154998]
-offset_left = -219.0
+offset_left = -56.0
 offset_top = -58.0
-offset_right = -12.0
+offset_right = 151.0
 offset_bottom = 17.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("7_pa8r4")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 15
 text = "         Start"
 
 [node name="Label2" type="Label" parent="Node" unique_id=834119573]
@@ -321,7 +321,7 @@ offset_left = 514.0
 offset_top = -1.0
 offset_right = 826.0
 offset_bottom = 74.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.9200596, 0.18825713, 0.6291025, 1)
 theme_override_fonts/font = ExtResource("7_pa8r4")
 theme_override_font_sizes/font_size = 8
 text = "Falling Hurts..."
@@ -331,7 +331,7 @@ offset_left = 1207.0
 offset_top = 73.0
 offset_right = 1519.0
 offset_bottom = 148.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0.089999974, 0.089999974, 1)
 theme_override_fonts/font = ExtResource("7_pa8r4")
 theme_override_font_sizes/font_size = 8
 text = "    A enemy ahead!"
@@ -341,7 +341,7 @@ offset_left = 1629.0
 offset_top = -74.0
 offset_right = 1941.0
 offset_bottom = 1.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.089999974, 0.42366678, 1, 1)
 theme_override_fonts/font = ExtResource("7_pa8r4")
 theme_override_font_sizes/font_size = 8
 text = "Almost there...."
@@ -351,7 +351,7 @@ offset_left = 535.0
 offset_top = -159.0
 offset_right = 847.0
 offset_bottom = -84.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0.22000003, 0.22000003, 1)
 theme_override_fonts/font = ExtResource("7_pa8r4")
 theme_override_font_sizes/font_size = 8
 text = "Watch out for enemy!"
