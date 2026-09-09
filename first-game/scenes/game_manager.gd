@@ -10,5 +10,5 @@ func increase_score():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	await get_tree().process_frame
-#	EventBus.coin_collected.connect(increase_score)
+	EventBus.coin_collected.connect(increase_score)
 	pass # Replace with function body.

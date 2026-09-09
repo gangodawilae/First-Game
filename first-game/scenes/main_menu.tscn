@@ -1,14 +1,17 @@
 [gd_scene format=3 uid="uid://ba13fodut803x"]
 
 [ext_resource type="FontFile" uid="uid://c0udlrmuadkt6" path="res://assets/fonts/PixelOperator8.ttf" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://ljgnqlhrdd86" path="res://scenes/main_menu.gd" id="1_ekxnf"]
 
 [node name="Main Menu" type="Control" unique_id=1351281724]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ekxnf")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2085851619]
 layout_mode = 1
@@ -20,8 +23,10 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1217792561]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 101.0
+offset_top = 43.0
+offset_right = 315.0
+offset_bottom = 123.0
 
 [node name="RestartButton" type="Button" parent="VBoxContainer" unique_id=80217984]
 layout_mode = 2
@@ -32,7 +37,7 @@ theme_override_fonts/font = ExtResource("1_06t4h")
 theme_override_font_sizes/font_size = 30
 text = "  Restart"
 
-[node name="ExitButton2" type="Button" parent="VBoxContainer" unique_id=1057006730]
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=1057006730]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.88, 0.008799992, 0.40083984, 0.9843137)
@@ -40,3 +45,6 @@ theme_override_colors/font_pressed_color = Color(0.26999998, 0.37950003, 1, 1)
 theme_override_fonts/font = ExtResource("1_06t4h")
 theme_override_font_sizes/font_size = 28
 text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
